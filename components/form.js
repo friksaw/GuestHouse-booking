@@ -30,7 +30,7 @@ export default function Form() {
     async function createNote() {
         console.log(JSON.stringify(form))
         try {
-            const res = await fetch('http://localhost:3000/api/booking', {
+            const res = await fetch('http://freakssha.ru/api/booking', {
                 method: 'POST',
                 headers: {
                     "Accept": "application/json",

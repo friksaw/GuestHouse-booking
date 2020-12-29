@@ -5,7 +5,7 @@ import time
 
 
 bot = telebot.TeleBot('1465722335:AAGlKk_Fp-Kx9Fn4ZPycbNrH9vW1-Uv4F-A')
-url = "http://localhost:3000/api/booking"
+url = "http://freakssha.ru/api/booking"
 headers = {
     'Content-Type': "application/x-www-form-urlencoded",
     'cache-control': "no-cache"
@@ -13,15 +13,15 @@ headers = {
 chat_id = 523011246
 
 def get_response():
-    response = requests.request("GET", url, headers=headers)
-    json_response = json.loads(response.content)
-    booking_length = len(json_response['data']) - 1
-    last_booking = json_response['data'][booking_length]
 
-    return last_booking
+        response = requests.request("GET", url, headers=headers)
+        json_response = json.loads(response.content)
+        booking_length = len(json_response['data']) - 1
+        last_booking = json_response['data'][booking_length]
 
-def get_chat_id(message):
-    print(message.chat.id)
+        return last_booking
+
+
 
 def print_message(new_booking):
     bot.send_message(chat_id, 'Имя: {0} \n Телефон: {1} \n С {2} до {3}'.format(new_booking['name'],
