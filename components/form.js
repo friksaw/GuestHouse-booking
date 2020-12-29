@@ -75,7 +75,7 @@ export default function Form() {
                     <a className={styles.header_button} onClick={handleClickOpen}>
                         Забронировать на сайте
                     </a> или по телефону <a className={styles.header_button}>
-                        8 (918) 482-40-45</a>
+                    8 (918) 482-40-45</a>
                 </p>
             </a>
             <Dialog

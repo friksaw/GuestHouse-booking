@@ -10,45 +10,45 @@ import React from "react";
 
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-        <Head>
-          <title>Гостевой дом "На Чайковского 70"</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>Гостевой дом "На Чайковского 70"</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
 
-        <Header/>
+            <Header/>
 
-        <main className={styles.main}>
+            <main className={styles.main}>
 
-          <div className={styles.grid}>
-              <Form/>
+                <div className={styles.grid}>
+                    <Form/>
 
-              <a className={styles.card}>
-                  <div className={styles.card_map}/>
-                  <div className={styles.card_text2}>
-                      <p>
-                          Центральный район города Новороссийска, 10 минут пешком от автовокзала вверх или 2 минуты на машине.
-                          Уютные апартаменты оснащены кухонными зонами, холодильниками, микроволновыми печами, электрочайниками,
-                          стиральными машинками, отдельными террасами и зонами барбекю.
-                      </p>
-                      <br/>
-                      <p>
-                          Ждём вас в гости!
-                      </p>
-                  </div>
-              </a>
+                    <a className={styles.card}>
+                        <div className={styles.card_map}/>
+                        <div className={styles.card_text2}>
+                            <p>
+                                Центральный район города Новороссийска, 10 минут пешком от автовокзала вверх или 2 минуты на машине.
+                                Уютные апартаменты оснащены кухонными зонами, холодильниками, микроволновыми печами, электрочайниками,
+                                стиральными машинками, отдельными террасами и зонами барбекю.
+                            </p>
+                            <br/>
+                            <p>
+                                Ждём вас в гости!
+                            </p>
+                        </div>
+                    </a>
 
 
-            <Room1/>
-            <Room2/>
-            <Room3/>
-          </div>
-        </main>
+                    <Room1/>
+                    <Room2/>
+                    <Room3/>
+                </div>
+            </main>
 
-        <Footer/>
-    </div>
-  )
+            <Footer/>
+        </div>
+    )
 }
 
 Home.getInitialProps = async () => {
@@ -57,5 +57,3 @@ Home.getInitialProps = async () => {
 
     return { booking: data }
 }
-
-
