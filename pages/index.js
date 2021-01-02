@@ -24,22 +24,6 @@ export default function Home() {
                 <div className={styles.grid}>
                     <Form/>
 
-                    <a className={styles.card}>
-                        <div className={styles.card_map}/>
-                        <div className={styles.card_text2}>
-                            <p>
-                                Центральный район города Новороссийска, 10 минут пешком от автовокзала вверх или 2 минуты на машине.
-                                Уютные апартаменты оснащены кухонными зонами, холодильниками, микроволновыми печами, электрочайниками,
-                                стиральными машинками, отдельными террасами и зонами барбекю.
-                            </p>
-                            <br/>
-                            <p>
-                                Ждём вас в гости!
-                            </p>
-                        </div>
-                    </a>
-
-
                     <Room1/>
                     <Room2/>
                     <Room3/>
@@ -57,3 +41,4 @@ Home.getInitialProps = async () => {
 
     return { booking: data }
 }
+

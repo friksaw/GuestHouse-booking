@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Room1() {
     return (
-        <a className={styles.card} style={{marginTop: 25}}>
+        <a className={styles.card} style={{marginTop: 15}}>
             <div className={styles.card_text}>
                 <h3>Двухместные аппартаменты с террассой и зоной барбекю &rarr;</h3>
                 <br/>
@@ -13,7 +13,7 @@ export default function Room1() {
                 </p>
                 <br/>
             </div>
-            <div className={styles.card_img1}/>
+            <div className={styles.card_img}/>
         </a>
     )
 }

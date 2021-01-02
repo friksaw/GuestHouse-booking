@@ -13,7 +13,7 @@ export default function Room2() {
                 </p>
                 <br/>
             </div>
-            <div className={styles.card_img2}/>
+            <div className={styles.card_img}/>
         </a>
     )
 }

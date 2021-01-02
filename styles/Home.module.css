@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(https://sun9-3.userapi.com/impf/mHIdqojuWZdt2L5BfRZerh_DLBpGgcpIxFFlqA/WurOd5leuWU.jpg?size=667x800&quality=96&proxy=1&sign=c327ce846266ba594b17184430d403f1&type=album);
+  background-image: url(https://kidpassage.com/images/publications/9-interesnyh-faktov-novorossijske/cover_original.jpg);
   background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .main {
@@ -19,65 +25,22 @@
 
 .header {
   width: 100%;
-  height: 13vh;
-  border-bottom: 1px solid #63003f;
+  height: 20vh;
+  border-bottom: 1px solid #303F9F;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background-color: white;
-  flex-direction: column;
-}
-
-.header_button {
-  text-decoration: none;
-  color: #63003f;
-  text-align: center;
-  font-weight: bold;
+  flex-direction: row;
 }
 
 .header_container {
-  max-width: 1060px;
+
+}
+.header_button {
+  color: red;
 }
 
-.header a {
-  max-width: 1180px;
-  border-radius: 10px;
-}
-.header h3 {
-  max-width: 1180px;
-  border-radius: 100px;
-}
-
-
-
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #63003f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  margin-top: 2rem;
-}
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title a {
-  color: #63003f;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
 .header_button:focus,
 .header_button:hover {
   text-decoration: underline;
@@ -86,7 +49,8 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 3.8rem;
+  font-size: 2.5rem;
+  font-family: 'Pacifico', cursive;
 }
 
 .title,
@@ -111,19 +75,18 @@
 }
 
 .card {
-  margin: 1rem;
+  margin: 0.5rem;
   flex-basis: 90%;
   padding: 1.5rem;
   text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #63003f;
-  border-radius: 10px;
+  border: 1px solid #303F9F;
+  border-radius: 1px;
   background-color: white;
 
   display: flex;
   flex-direction: row;
 }
+
 
 
 .card h3 {
@@ -154,7 +117,7 @@
 
 
 
-.card_img1 {
+.card_img {
   background-image: url(https://sun9-57.userapi.com/impf/aCLZkv43YUesSx-3HYN4Qf_x9XfUNkTqsSPC1w/BTcio40OBT4.jpg?size=1280x1280&quality=96&proxy=1&sign=cc809be9896dc4f754920c349fb4e4b5&type=album);
   width: 100%;
   background-size: cover;
@@ -163,39 +126,28 @@
   background-position: center center;
   margin-left: 5rem;
 }
-.card_img2 {
-  background-image: url(https://sun9-73.userapi.com/impf/Bft_CXQjAPaK2Lkrxzy8xwp5SYe97KXPq22tkw/m7exNeRq5Zs.jpg?size=1280x1280&quality=96&proxy=1&sign=a80e013b52b94a40faf124737561be1a&type=album);
+
+.footer {
   width: 100%;
-  background-size: cover;
-  min-height: 560px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-left: 5rem;
-}
-.card_img3 {
-  background-image: url(https://sun9-45.userapi.com/impf/lHi0IzPL6hpKXIeo8xB1CISctc89hjTS-3BF-w/ywn0BiKbgx0.jpg?size=1280x1280&quality=96&proxy=1&sign=fbe2ec23fea78a347c5b93aded1ecc0e&type=album);
-  width: 100%;
-  background-size: cover;
-  min-height: 560px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-left: 5rem;
-}
-.card_map {
-  background-image: url(https://sun9-35.userapi.com/impf/tycs741L99gGp1nMY9g6s3mOd8IpJcp-sOk1mw/4kJywFWAsjA.jpg?size=491x307&quality=96&proxy=1&sign=0f46fc72e6040c87838567b524cb1f8e&type=album);
-  width: 100%;
-  background-size: cover;
-  min-height: 200px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-right: 2rem;
+  height: 100px;
+  border-top: 1px solid #303F9F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 3rem;
 }
 
-@media (max-width: 1100px) {
-  .title {
-    font-size: 3.4rem;
-  }
+.footer img {
+  margin-left: 0.5rem;
 }
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 850px) {
   .grid {
     width: 100%;
@@ -207,15 +159,10 @@
   .card {
     flex-direction: column;
   }
-  .card_img1 {
+  .card_img {
     margin-left: 0rem;
   }
-  .card_img2 {
-    margin-left: 0rem;
-  }
-  .card_img3 {
-    margin-left: 0rem;
-  }
+
   .card_text {
     width: 100%;
   }
