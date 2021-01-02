@@ -21,7 +21,7 @@ export default function Form() {
     async function createBooking() {
         console.log(JSON.stringify(form))
         try {
-            const res = await fetch('http://freakssha.ru/api/booking', {
+            const res = await fetch('https://freakssha.ru/api/booking', {
                 method: 'POST',
                 headers: {
                     "Accept": "application/json",

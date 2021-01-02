@@ -36,7 +36,7 @@ export default function Home() {
 }
 
 Home.getInitialProps = async () => {
-    const res = await fetch('http://freakssha.ru/api/booking');
+    const res = await fetch('https://freakssha.ru/api/booking');
     const { data } = await res.json();
 
     return { booking: data }
