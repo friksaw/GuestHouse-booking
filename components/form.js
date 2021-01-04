@@ -1,11 +1,9 @@
 import React from "react";
 import styles from '../styles/Home.module.css'
 import Button from '@material-ui/core/Button';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
+import axios from "axios";
 import TextField from "@material-ui/core/TextField";
 import { useState, useEffect } from 'react';
-import fetch from 'isomorphic-unfetch';
 
 
 export default function Form() {
@@ -16,29 +14,25 @@ export default function Form() {
         if (isSubmitting) {
             createBooking();
         }
+
+        setSubmitting(false)
     }, )
 
     async function createBooking() {
-        console.log(JSON.stringify(form))
-        try {
-            const res = await fetch('https://freakssha.ru/api/booking', {
-                method: 'POST',
-                headers: {
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(form)
-            })
-        } catch (error) {
-            console.log(error);
-        }
+        axios({
+            method: 'post',
+            url: 'http://localhost:3000/api/booking',
+            data: form
+        })
+            .then(res => this.setState({ recipes: res.data }));
     }
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitting(true)
 
-        console.log(JSON.stringify(form))
+        alert("Успешное бронирование! Мы свяжемся с вами по телефону в течении часа и обговорим детали.")
     };
     const handleChange = (e) => {
         setForm({
@@ -51,7 +45,7 @@ export default function Form() {
 
     return (
         <div className={styles.card} style={{marginTop: -90, marginBottom: 40}}>
-            <TextField onChange={handleChange} name='name' label="ФИО" style={{width: "55%", marginRight: "2%", marginTop: -13}}/>
+            <TextField onChange={handleChange} name='name' label="ФИО" className={styles.form_name} style={{width: "55%", marginRight: "2%", marginTop: -13}}/>
             <TextField onChange={handleChange} name='phone' label="Номер телефона" style={{width: "40%", marginRight: "2%", marginTop: -13}}/>
 
             <TextField onChange={handleChange} name='fromDate' label="Дата заезда" style={{width: "40%", marginRight: "2%", marginTop: -13}}/>

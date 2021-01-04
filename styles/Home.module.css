@@ -35,16 +35,9 @@
 }
 
 .header_container {
-
-}
-.header_button {
-  color: red;
+  display: flex;
 }
 
-.header_button:focus,
-.header_button:hover {
-  text-decoration: underline;
-}
 
 .title {
   margin: 0;
@@ -59,9 +52,11 @@
 }
 
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.form_name {
+
+}
+.form_button {
+
 }
 
 
