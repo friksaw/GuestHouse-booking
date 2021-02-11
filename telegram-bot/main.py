@@ -4,13 +4,15 @@ import json
 import time
 
 
-bot = telebot.TeleBot('1465722335:AAGlKk_Fp-Kx9Fn4ZPycbNrH9vW1-Uv4F-A')
+bot = telebot.TeleBot('')
 url = "http://freakssha.ru/api/booking"
 headers = {
     'Content-Type': "application/x-www-form-urlencoded",
     'cache-control': "no-cache"
     }
-chat_id = 523011246
+chat_id = 1165051058
+
+
 
 def get_response():
 
